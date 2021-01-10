@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>PhynX</title>
+    <meta name="viewport" content="initial-scale=1, device-width=initial-width"/>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        @keyframes ergebe {
+	    from { color: lime; }
+	    to { color: red; }
+        }
+        
+	    @font-face {
+		font-family:'BadSignal';
+		src: url("./Bad Signal.otf");
+	    }
+	    
+	    @font-face {
+		font-family:'corrupted';
+		src: url("./Corrupted File.ttf");
+	    }
+	    
+	    * {
+		    color:white;
+		    outline:none;
+		    background:#2b2b2b;
+		    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	    }
+	    
+	    .halaman {
+		    color:#9f9f9f;
+		    background:#1b1b1b;
+		    font-family:courier;
+	    }
+	    
+	    h1 {
+		    font-family:"corrupted";
+		    color: white;
+		    font-size:50px;
+		    animation-name: ergebe;
+	        animation-duration: 10s;
+	        animation-iteration-count: infinite;
+	        animation-direction: alternate;
+	    }
+	    #clientip {
+	        color: white;
+	        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	    }
+	    #desc {
+	        font-family: Arial;
+	    }
+	  </style>
+	  <div id="banner">
+		  <center><h1>PHYNX</h1></center>
+	  </div>
+	  <br>
+	  <br>
+	  <div id="halaman">
+		  <center><p id="desc">Welcome to PhynX's Website, This website is for private hosting only.</p></center>
+		  <br>
+		  <br>
+		  <center><caption>Your IP : <p id="clientip" ></p></caption></center>
+		  <script type="text/javascript">
+	          $.get('https://ipapi.co/ip/', 
+	          function (data) {
+	              document.getElementById('clientip').innerHTML = data;
+	          });
+	      </script>
+	  </div>
+   </body>
+</html>
