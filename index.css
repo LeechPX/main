@@ -6,10 +6,16 @@ body {
 	outline:none;
 	background:#2b2b2b;
 }
-.halaman {
-	color:#9f9f9f;
-	background:#1b1b1b;
-	font-family:courier;
+.info {
+    width: 90%;
+    height: 90%;
+    transition: transform .2s;
+}
+.info:hover {
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 h1 {
 	color: white;
@@ -19,7 +25,7 @@ h1 {
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-shadow: 10px 10px black, 10px 10px black, 10px 10px black, 10px 10px black;
 	transform:translateZ(0);
 }
 .glow {

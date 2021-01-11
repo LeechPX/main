@@ -19,52 +19,55 @@
 	  </div>
 	  <br>
 	  <br>
-	  <div id="halaman">
+	  <div id="halaman" class="halaman">
 		  <center><p id="desc">Welcome to PhynX's Website, This website is for private hosting only.</p></center>
 		  <br>
-		  <br>
-		  <fieldset>
-		      <center>
-		          <p style="color:white;">Your IP Info : <p id="clientip" class="glow">UNKNOWN</p></p>
-		          <br>
-		          <p style="color:white;">Your Browser Type : <p id="browstype" class="glow">UNKNOWN</p></p>
-		          <br>
-		          <p style="color:white;">Your Browser Info : <p id="browsinf" class="glow">UNKNOWN</p></p>
-		          <br>
-		          <p style="color:white;">Your OS Type : <p id="ostype" class="glow">UNKNOWN</p></p>
-		          <hr>
-		          <p id="info">This information is private and never shared to other people or organization.</p>
-		      </center>
-		      <script type="text/javascript">
-	              $.get('https://ipapi.co/ip/', 
-	              function (data) {
-	                  document.getElementById('clientip').innerHTML = data;
-	              });
-	              if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	                  document.getElementById('browstype').innerHTML = 'Mobile';
-	              }
-	              else {
-	                  document.getElementById('browstype').innerHTML = 'Desktop';
-	              }
-	              if (navigator.userAgent.search("MSIE") >= 0) {
-	                  document.getElementById('browsinf').innerHTML = 'MSIE';
-	              }
-	              else if (navigator.userAgent.search("Chrome") >= 0) {
-	                  document.getElementById('browsinf').innerHTML = 'Chrome';
-	              }
-	              else if (navigator.userAgent.search("Firefox") >= 0) {
-	                  document.getElementById('browsinf').innerHTML = 'FireFox';
-	              }
-	              else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-	                  document.getElementById('browsinf').innerHTML = 'Safari/Chrome';
-	              }
-	              else if (navigator.userAgent.search("Opera") >= 0) {
-	                  document.getElementById('browsinf').innerHTML = 'Opera';
-	              }
-	              document.getElementById('ostype').innerHTML = navigator.platform;
-	          </script>
-	      </fieldset>
 	  </div>
+	  <center>
+	      <div class="info">
+		      <fieldset>
+		          <center>
+		              <p style="color:white;">Your IP Info : <p id="clientip" class="glow">UNKNOWN</p></p>
+		              <br>
+		              <p style="color:white;">Your Browser Type : <p id="browstype" class="glow">UNKNOWN</p></p>
+		              <br>
+		              <p style="color:white;">Your Browser Info : <p id="browsinf" class="glow">UNKNOWN</p></p>
+		              <br>
+		              <p style="color:white;">Your OS Type : <p id="ostype" class="glow">UNKNOWN</p></p>
+		              <hr>
+		              <p id="info">This information is private and never shared to other people or organization.</p>
+		          </center>
+		      </fieldset>
+		  </div>
+		  <script type="text/javascript">
+		  $.get('https://ipapi.co/ip/', 
+		  function (data) {
+		      document.getElementById('clientip').innerHTML = data;
+		  });
+		  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		      document.getElementById('browstype').innerHTML = 'Mobile';
+		  }
+		  else {
+		      document.getElementById('browstype').innerHTML = 'Desktop';
+		  }
+		  if (navigator.userAgent.search("MSIE") >= 0) {
+		      document.getElementById('browsinf').innerHTML = 'MSIE';
+		  }
+		  else if (navigator.userAgent.search("Chrome") >= 0) {
+		      document.getElementById('browsinf').innerHTML = 'Chrome';
+		  }
+		  else if (navigator.userAgent.search("Firefox") >= 0) {
+		      document.getElementById('browsinf').innerHTML = 'FireFox';
+		  }
+		  else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+		      document.getElementById('browsinf').innerHTML = 'Safari/Chrome';
+		  }
+		  else if (navigator.userAgent.search("Opera") >= 0) {
+		      document.getElementById('browsinf').innerHTML = 'Opera';
+		  }
+		  document.getElementById('ostype').innerHTML = navigator.platform;
+	   </script>
+	  <br>
 	  <br>
 	  <div class="footer">
 	      <p class="txtfooter">Copyright 2019-2020 by PhynX. All Right Reserved.</p>
