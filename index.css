@@ -22,10 +22,9 @@ h1 {
 	font-size:50px;
 	font-family: "Karmatic Arcade";
 	animation-name: ergebe;
-	animation-duration: 10s;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	text-shadow: 10px 10px black, 10px 10px black, 10px 10px black, 10px 10px black;
 	transform:translateZ(0);
 }
 .glow {
