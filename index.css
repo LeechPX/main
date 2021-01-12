@@ -1,0 +1,63 @@
+@keyframes ergebe {
+from { color: lime;transition: color 100ms; }
+to { color: red;transition: color 100ms; }
+}
+body {
+outline:none;
+background:#2b2b2b;
+}
+.info {
+width: 90%;
+height: 90%;
+transition: transform .2s;
+}
+.info:hover {
+-moz-transform: scale(1.1);
+-ms-transform: scale(1.1);
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+}
+h1 {
+color: white;
+font-size:50px;
+font-family: "Karmatic Arcade";
+animation-name: ergebe;
+animation-duration: 20s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+transform:translateZ(0);
+}
+.glow {
+color: white;
+text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px cyan;
+}
+#desc {
+font-family: Arial;
+color: white;
+}
+#info {
+font-family: Monospace;
+font-size: 11px;
+color: white;
+}
+.footer {
+background: transparent;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+font-size: 10px;
+}
+.txtfooter {
+animation-name: ergebe;
+animation-duration: 20s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+font-family: Iceberg;
+background:transparent;
+margin-bottom:2px;
+margin-top:0px;
+text-shadow: 1px 1px 1px white;
+transform:translateZ(0);
+}
