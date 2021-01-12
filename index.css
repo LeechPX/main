@@ -15,10 +15,18 @@ transform: translateZ();
 }
 .info:hover {
 transform: scale(1.1);
+-o-transform: scale(1.1);
+-ms-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-webkit-transform: scale(1.1);
 }
 .inf:hover {
 background: #1778F3;
 transition: background 250ms;
+-o-transition: background 250ms;
+-ms-transition: background 250ms;
+-moz-transition: background 250ms;
+-webkit-transition: background 250ms;
 margin-bottom: 30px;
 }
 h1 {
