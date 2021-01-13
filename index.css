@@ -5,6 +5,7 @@ to { color: red;transition: color 250ms; }
 body {
 outline:none;
 background:#2b2b2b;
+font-family: Arial;
 }
 .info {
 width: 90%;
