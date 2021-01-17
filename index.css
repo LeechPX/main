@@ -20,6 +20,7 @@ transform: scale(1.1);
 -ms-transform: scale(1.1);
 -moz-transform: scale(1.1);
 -webkit-transform: scale(1.1);
+margin-bottom: 40px;
 }
 .inf:hover {
 background: #1778F3;
@@ -28,7 +29,6 @@ transition: background 250ms;
 -ms-transition: background 250ms;
 -moz-transition: background 250ms;
 -webkit-transition: background 250ms;
-margin-bottom: 30px;
 }
 h1 {
 color: white;
