@@ -29,6 +29,7 @@ transition: background 250ms;
 -ms-transition: background 250ms;
 -moz-transition: background 250ms;
 -webkit-transition: background 250ms;
+margin-bottom:40px;
 }
 h1 {
 color: white;
