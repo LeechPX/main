@@ -14,14 +14,14 @@
       <link href="KarmaticArcade/stylesheet.css" rel="stylesheet">
    </head>
    <body>
-      <div id="banner">
+      <div>
          <center>
             <h1>PHYNX</h1>
          </center>
       </div>
       <br>
       <br>
-      <div id="halaman" class="halaman">
+      <div>
          <center>
             <p id="desc">Welcome to PhynX's Website, This website is for private hosting only.</p>
          </center>
@@ -31,9 +31,17 @@
       <div class="info">
          <fieldset class="inf" style="border-style:none;border-radius:5px;">
             <center>
+               <p style="color:white;">Current Date : 
+               <p id="curdate" class="glow" style="color:red;">UNKNOWN</p>
+               </p>
+               <br>
+               <p style="color:white;">Current Directory : 
+               <p id="curdir" class="glow" style="color:red;">UNKNOWN</p>
+               </p>
+               <br>
                <p style="color:white;">Your IP Info : 
                <p id="clientip" class="glow" style="color:red;">UNKNOWN</p>
-               </p>
+               </p>  
                <br>
                <p style="color:white;">Your Browser Type : 
                <p id="browstype" class="glow" style="color:red;">UNKNOWN</p>
@@ -52,6 +60,11 @@
          </fieldset>
       </div>
       <script type="text/javascript">
+         var date = Date();
+         document.getElementById('curdate').innerHTML = date.substr(0,24);
+         document.getElementById('curdate').style.color = '#ffffff';
+         document.getElementById('curdir').innerHTML = window.location;
+         document.getElementById('curdir').style.color = '#ffffff';
          $.get('https://ipapi.co/ip/', 
          function (data) {
              document.getElementById('clientip').innerHTML = data;
