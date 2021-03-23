@@ -1,5 +1,4 @@
-<!DOCTYPE html
-   <html>
+<html>
 <head>
    <title>Touched By PhynX</title>
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -77,6 +76,7 @@
       animation: shift 1s ease-in-out infinite alternate;
       -webkit-backface-visibility: hidden;
       -webkit-transform-style: preserve-3d;
+      text-shadow: 1px 1px 2px white;
       }
       @keyframes shift {
       0%,
@@ -90,10 +90,12 @@
       100% {
       -webkit-transform: skewX(0deg);
       transform: skewX(0deg);
+      transform: translate(0%, 0px);
       }
       41% {
       -webkit-transform: skewX(5deg);
       transform: skewX(5deg);
+      transform: translate(-90%, 0px);
       }
       42% {
       -webkit-transform: skewX(-5deg);
@@ -106,6 +108,7 @@
       60% {
       -webkit-transform: skewX(-30deg);
       transform: skewX(-30deg);
+      transform: translate(90%, -100px);
       }
       63% {
       -webkit-transform: skewX(60deg);
@@ -116,8 +119,9 @@
       transform: skewX(-60deg);
       }
       71% {
-      -webkit-transform: skewX(40deg) skewY(-5deg);
-      transform: skewX(40deg) skewY(-5deg);
+      -webkit-transform: skewX(40deg, -10deg);
+      transform: skewX(40deg, -10deg);
+      transform: translate(-90%, 100px);
       }
       }
    </style>
