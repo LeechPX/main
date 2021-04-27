@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>My Mining Script</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="description" content="From lammer to hengker.">
+        <meta name="og:title" content="[ P H Y N X ]">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="og:description" content="From lammer to hengker.">
+    </head>
+    <body class="body">
+        <style type="text/css">
+            .body {background-color: #ffffd6;}
+            .body blockquote{overflow:auto;background-color:#20273c;color:white;border-radius:4px;position:relative;font-size:.9rem;font-weight:500;margin-left:0;margin-right:0;padding:15px 25px;/**border-left:2px solid #ebeced*/}
+        </style>
+        <div class="ngrok">
+            <p>Ngrok Auth Token: </p>
+            <blockquote id="authtoken">1i7hxtASohbUDmOB2sBkBFttABX_4tUjf49fbJrrowXDX6tNi</blockquote>
+            <button onclick="copy('authtoken');">Copy</button>
+        </div>
+        <hr>
+        <div class="Address">
+            <p>DOGE Address: </p>
+            <blockquote id="dogeaddr">DKZQbcBANBQCFbdoLkvnM3cvwGMMFjaM4x</blockquote>
+            <button onclick="copy('dogeaddr');">Copy</button>
+            <hr>
+            <p>BTC Address: </p>
+            <blockquote id="btcaddr">1CFaxGMsSxsPiBCWA8nEJSEgn2fUbmVLSb</blockquote>
+            <button onclick="copy('btcaddr');">Copy</button>
+        </div>
+        <hr>
+        <div class="Prepare">
+            <p>Prepare: </p>
+            <blockquote id="prepare">wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -zxf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1</blockquote>
+            <button onclick="copy('prepare');">Copy</button>
+        </div>
+        <hr>
+        <div class="Run">
+            <p>Run: </p>
+            <blockquote id="run">./xmrig --donate-level 1 -o rx.unmineable.com:3333 -u DOGE:DKZQbcBANBQCFbdoLkvnM3cvwGMMFjaM4x.nyxbot --asm intel --cpu-no-yield --randomx-mode fast -p x -k -a rx/0</blockquote>
+            <button onclick="copy('run');">Copy</button>
+        </div>
+        <hr>
+        <div class="oneline">
+            <p>Oneline Code: </p>
+            <blockquote id="onelinecd">wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz && tar -zxf xmrig-6.12.1-linux-x64.tar.gz && cd xmrig-6.12.1 && clear && ./xmrig --donate-level 1 -o rx.unmineable.com:3333 -u DOGE:DKZQbcBANBQCFbdoLkvnM3cvwGMMFjaM4x.nyxbot --asm intel --cpu-no-yield --randomx-mode fast -p x -k -a rx/0</blockquote>
+            <button onclick="copy('onelinecd');">Copy</button>
+        </div>
+        <script type="text/javascript">
+            function copy(id) {
+                var str = document.getElementById(id).innerHTML;
+                copyToClipboard(str);
+            }
+            function copyToClipboard(str) {
+                const el = document.createElement('textarea');
+                el.value = str;
+                el.setAttribute('readonly', '');
+                el.style.position = 'absolute';
+                el.style.left = '-9999px';
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+            }
+        </script>
+    </body>
+</html>
