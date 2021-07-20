@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/growstd.txt$
+RewriteCond %{REQUEST_URI} !^/growstd.bin$
 RewriteRule ^([^.]+)$ $index.html [NC,L]
