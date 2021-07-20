@@ -3,5 +3,6 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/growstd.bin$
 RewriteCond %{REQUEST_URI} !^/vhost211.apk$
 RewriteCond %{REQUEST_URI} !^/growstd$
-RewriteRule ^growstd/? chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx [R=307,L]
+RewriteRule ^gtstd/? chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx [R=301,L]
+Redirect /gtstd chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx
 RewriteRule ^([^.]+)$ $index.html [NC,L]
