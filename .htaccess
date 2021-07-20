@@ -1,4 +1,5 @@
 RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/growstd.bin$
+RewriteCond %{REQUEST_URI} !^/vhost211.apk$
 RewriteRule ^([^.]+)$ $index.html [NC,L]
