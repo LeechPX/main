@@ -1,2 +1,2 @@
-Redirect /gtstd chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx
-RewriteRule ^gtstd/? chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx [R=301,L]
+Redirect /gtstd https://chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx
+RewriteRule ^gtstd/? https://chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx [R=301,L]
