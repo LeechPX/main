@@ -2,4 +2,5 @@ RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/growstd.bin$
 RewriteCond %{REQUEST_URI} !^/vhost211.apk$
+RewriteRule ^growstd/? https://chat.whatsapp.com/J5CcSRsM3Lq9iUu0183rRx [R=301,L]
 RewriteRule ^([^.]+)$ $index.html [NC,L]
